@@ -1,18 +1,44 @@
 <!doctype html>
-<html lang=sv>
+<html lang=en>
     <head>
       <meta charset=utf-8>
       <title>Tonelli</title>
       <link href="./main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-      <h1>Planera in minst tre aktiviteter per vecka... </h1>
-        <div class="inputsection">
+      <h1>Help me choose a christmas gift... </h1>
+        <div class="inputSection">
           <div class="inputs">
-            <input placeholder="Skriv"></input>
+            <input placeholder="Something"></input>
         </div>
-        <button class="addoption">Välj</button>
+        <button class="addOption">Add</button>
       </div>
-      <button>Kör!</button>
-    </body>
-</html>
+      <div class="resultSection"></div></div>
+      <button class="submit">Go!</button>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+    $(function() {
+      $('.resultSection').hide()
+
+        var add_option = function() {
+          $('.inputs').append('<input></input>')
+        }
+        $('.addOption').click(add_option)
+
+        var option = []
+        var submit = function () {
+          $('.inputSection').hide()
+          $('.resultSection').css('display', 'flex')
+          $('input').each(function() {
+            option.push($(this).val())
+          })
+        var winner = option[Math.floor(Math.random() * option.length)]
+        console.log(winner)
+        $('.resultSection').text(winner)
+        }
+        $('.submit').click(submit)
+      } )
+        </script>
+      </body>
+      </html>
