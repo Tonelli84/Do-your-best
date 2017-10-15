@@ -4,7 +4,13 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 margin-top: 150px;
+background-color: green
 }
+
+button {
+background-color: orange;
+}
+
 h1{
 font-weight: lighter;
 font-size: 40px;
@@ -22,6 +28,7 @@ margin-bottom: 0px;
  }
 input {
   margin-top: 10px;
+  background-color: yellow;
 }
 .addOption {
   margin-top: 10px;
