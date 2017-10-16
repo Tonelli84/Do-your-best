@@ -14,7 +14,7 @@
         <button class="addOption">Lägg till</button>
       </div>
       <div class="resultSection"></div></div>
-      <button class="submit">KÖR!</button>
+      <button id="körKnapp" class="submit">KÖR!</button>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
@@ -36,8 +36,10 @@
         var winner = option[Math.floor(Math.random() * option.length)]
         console.log(winner)
         $('.resultSection').text(winner)
+          $('#körKnapp').hide()
         }
         $('.submit').click(submit)
+
       } )
         </script>
       </body>
